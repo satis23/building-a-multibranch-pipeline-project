@@ -6,7 +6,6 @@ pipeline {
                 sh 'echo "Hello world!"'
             }
         }
-    }
     agent {
         docker { image 'alpine/helm:2.14.0' }
     }
@@ -15,4 +14,5 @@ pipeline {
                 sh 'helm list'
             }
     }
+}
 }
