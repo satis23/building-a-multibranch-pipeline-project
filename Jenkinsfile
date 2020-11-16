@@ -6,10 +6,10 @@ pipeline {
                 sh 'echo "Hello world!"'
             }
         }
+        stage('Deploy') {
     agent {
         docker { image 'alpine/helm:2.14.0' }
     }
-        stage('Deploy') {
             steps {
                 sh 'helm list'
             }
