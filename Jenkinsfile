@@ -10,11 +10,9 @@ pipeline {
     agent {
         docker { image 'alpine/helm:2.14.0' }
     }
-    stages {
         stage('Deploy') {
             steps {
                 sh 'helm list'
             }
-        }
     }
 }
