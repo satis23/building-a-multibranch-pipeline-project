@@ -11,7 +11,9 @@ pipeline {
         docker { image 'alpine/helm:2.14.0' }
     }
             steps {
+                container('docker'){
                 sh 'helm list'
+                }
             }
     }
 }
